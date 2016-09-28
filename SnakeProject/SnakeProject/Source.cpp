@@ -1,19 +1,11 @@
-#include <iostream>
-#include <windows.h>
 
-using namespace std;
+#include "cursor.cpp"
 
-void gotoxy(int x, int y, char z)			//устанавливаем курсор в указанные координаты
-{
-	COORD coord;
-	coord.X = x;
-	coord.Y = y;
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-	cout << z << endl;
-}
+//using namespace std;
+
 
 int main() {
-	gotoxy(3, 3, '*');
+	Cursor1 b1;
 	
 
 	system("PAUSE");
