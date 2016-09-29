@@ -1,15 +1,14 @@
 
 #include <conio.h>
 #include "Cursor.h"
+#include "HorizontalLine.h"
 
 using namespace std;
 
 int main() {
 
-	Cursor1 b1(30, 15, '*'), b2, b3(5, 10, '%');
-	b1.draw();
-	b2.draw();
-	b3.draw();	
+	HorizontalLine line1(5, 15, 5, '*');
+	line1.drawHLine();
 
 	_getch();
 	return 0;
