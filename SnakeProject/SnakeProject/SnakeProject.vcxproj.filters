@@ -24,12 +24,18 @@
     <ClCompile Include="HorizontalLine.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
+    <ClCompile Include="VertikalLine.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cursor.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="HorizontalLine.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="VertikalLine.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>
