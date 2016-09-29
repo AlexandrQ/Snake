@@ -3,15 +3,13 @@
 #include <list>   
 #include <algorithm>
 #include "Cursor.h"
+#include "Figure.h" 
 
 
-class HorizontalLine
+class HorizontalLine : public Figure
 {
-	list<Cursor1> myList;
-
 public:
 	HorizontalLine(int xLeft, int xRight, int y, char symb);
-	~HorizontalLine();
-	void drawHLine();
+	~HorizontalLine();	
 };
 

@@ -14,11 +14,3 @@ VertikalLine::VertikalLine(int yUp, int yDown, int x, char symb)
 VertikalLine::~VertikalLine()
 {
 }
-
-void VertikalLine::drawVLine() {
-	list<Cursor1>::iterator iter;
-	iter = myList.begin();
-	for (; iter != myList.end(); iter++) {
-		iter->draw();
-	}
-}
