@@ -3,13 +3,15 @@
 #include "Cursor.h"
 #include "HorizontalLine.h"
 #include "VertikalLine.h"
+#include "SnakeClass.h"
 
 using namespace std;
 
 int main() {
-
+	
 	system("mode con cols=100 lines=40");
 
+	//рисуем рамку
 	HorizontalLine Hline1(1, 98, 1, '*');
 	HorizontalLine Hline2(1, 98, 38, '*');
 	VertikalLine VLine1(1, 38, 1, '*');
@@ -19,6 +21,13 @@ int main() {
 	Hline2.drawLine();
 	VLine1.drawLine();	
 	VLine2.drawLine();
+
+
+	//рисуем змейку
+	Cursor1 p(10, 10, '#');
+	SnakeClass snake(p, 6, RIGHT);
+	snake.drawLine();
+
 
 	_getch();
 	return 0;

@@ -13,5 +13,6 @@ HorizontalLine::HorizontalLine(int xLeft, int xRight, int y, char symb)
 
 HorizontalLine::~HorizontalLine()
 {
+
 }
 
