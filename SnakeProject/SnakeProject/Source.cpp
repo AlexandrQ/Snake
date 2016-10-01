@@ -11,7 +11,7 @@ int main() {
 	
 	system("mode con cols=100 lines=40");
 
-	//рисуем рамку
+	//Рисуем рамку
 	HorizontalLine Hline1(1, 98, 1, '*');
 	HorizontalLine Hline2(1, 98, 38, '*');
 	VertikalLine VLine1(1, 38, 1, '*');
@@ -23,10 +23,23 @@ int main() {
 	VLine2.drawLine();
 
 
-	//рисуем змейку
+	//Рисуем змейку
 	Cursor1 p(10, 10, '#');
 	SnakeClass snake(p, 6, RIGHT);
 	snake.drawLine();
+
+	//Двигаем змейку
+	snake.Move();
+	Sleep(300);
+	snake.Move();
+	Sleep(300);
+	snake.Move();
+	Sleep(300);
+	snake.Move();
+	Sleep(300);
+	snake.Move();
+	Sleep(300);
+	snake.Move();
 
 
 	_getch();

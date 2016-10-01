@@ -2,12 +2,13 @@
 
 
 
-SnakeClass::SnakeClass(Cursor1 tail, int length, Direction direction)
+SnakeClass::SnakeClass(Cursor1 tail, int length, Direction _direction)
 {
-	for (int i = 0; i <= length; i++) {
-
+	direction = _direction;
+								//тут возможно потребуется создавать список
+	for (int i = 0; i <= length; i++) {									
 		Cursor1 p = tail;
-		p.Move(i, direction);
+		p.Move(i, _direction);
 		myList.push_back(p);
 
 	}
@@ -16,4 +17,24 @@ SnakeClass::SnakeClass(Cursor1 tail, int length, Direction direction)
 
 SnakeClass::~SnakeClass()
 {
+}
+
+void SnakeClass::Move() {
+ Cursor1 tail = myList.front();
+
+	list<Cursor1>::iterator iter1;
+	iter1 = myList.begin();
+	myList.erase(iter1);
+	Cursor1 head = GetNextPoint();
+	myList.push_back(head);
+
+	tail.Clear();
+	head.Draw();  
+}
+
+Cursor1 SnakeClass::GetNextPoint() {
+	Cursor1 head = myList.back();
+	Cursor1 nextPoint = head;
+	nextPoint.Move(1, direction);
+	return nextPoint;
 }

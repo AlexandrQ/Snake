@@ -32,12 +32,17 @@ void Cursor1::Move(int offset, Direction direction) {
 		x = x + offset;
 	}
 	else if (direction == LEFT) {
-		x = x + offset;
+		x = x - offset;
 	}
 	else if (direction == UP) {
-		y = y + offset;
-	}
-	else if (direction == DOWN) {
 		y = y - offset;
 	}
+	else if (direction == DOWN) {
+		y = y + offset;
+	}
+}
+
+void Cursor1::Clear() {
+	symbol = ' ';
+	Draw();
 }

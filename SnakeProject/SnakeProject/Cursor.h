@@ -18,5 +18,6 @@ class Cursor1
 		~Cursor1();
 		void Draw();
 		void Move(int offset, Direction direction);
+		void Clear();
 };
 

@@ -8,8 +8,11 @@
 
 class SnakeClass : public Figure
 {	
+	Direction direction;
 public:
-	SnakeClass(Cursor1 tail, int length, Direction direction);
+	SnakeClass(Cursor1 tail, int length, Direction _direction);
 	~SnakeClass();
+	void Move();
+	Cursor1 GetNextPoint();
 };
 
