@@ -5,7 +5,10 @@
 #include "VertikalLine.h"
 #include "SnakeClass.h"
 
+
 using namespace std;
+using namespace System;
+
 
 int main() {
 	
@@ -23,6 +26,9 @@ int main() {
 	VLine2.drawLine();
 
 
+
+
+
 	//Рисуем змейку
 	Cursor1 p(10, 10, '#');
 	SnakeClass snake(p, 6, RIGHT);
@@ -31,16 +37,16 @@ int main() {
 	//Двигаем змейку
 	snake.Move();
 	Sleep(300);
-	snake.Move();
-	Sleep(300);
-	snake.Move();
-	Sleep(300);
-	snake.Move();
-	Sleep(300);
-	snake.Move();
-	Sleep(300);
-	snake.Move();
-
+	
+	while (true) {		
+		if (Console::KeyAvailable) {
+			ConsoleKeyInfo key = Console::ReadKey();
+			snake.HandleKey(key.Key);
+		}
+		Sleep(100);
+		snake.Move();
+	}
+	
 
 	_getch();
 	return 0;

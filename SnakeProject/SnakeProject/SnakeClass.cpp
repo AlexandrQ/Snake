@@ -38,3 +38,18 @@ Cursor1 SnakeClass::GetNextPoint() {
 	nextPoint.Move(1, direction);
 	return nextPoint;
 }
+
+void SnakeClass::HandleKey(ConsoleKey Key) {
+	if (Key == ConsoleKey::LeftArrow) {
+		direction = LEFT;
+	}
+	if (Key == ConsoleKey::RightArrow) {
+		direction = RIGHT;
+	}
+	if (Key == ConsoleKey::DownArrow) {
+		direction = DOWN;
+	}
+	if (Key == ConsoleKey::UpArrow) {
+		direction = UP;
+	}
+}
