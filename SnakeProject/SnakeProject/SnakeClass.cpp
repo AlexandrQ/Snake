@@ -68,11 +68,9 @@ bool SnakeClass::Eat(Cursor1 food) {
 bool SnakeClass::IsHitTail() {
 	list<Cursor1>::iterator iter1, iter2, iter3;		//добавил итер три для проверки
 	iter1 = myList.end();
-	iter2 = myList.begin();
-	iter3 = myList.end();
-	iter3--; iter3--;
-	for (; iter2 != iter3; iter2++) {
-		if (iter1->IsHit(*iter2)) {					 
+	iter2 = myList.begin();	
+	for (; iter2 != myList.end(); iter2++) {
+		if (iter1->IsHit(*iter2++)) {					 //где-то тут ошибка
 			return true;
 		}
 	}

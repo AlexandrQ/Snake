@@ -23,7 +23,7 @@ bool Figure::IsHit(Figure figure) {
 	list<Cursor1>::iterator iter;
 	iter = myList.begin();
 	for (; iter != myList.end(); iter++) {
-		if (figure.IsHit(*iter)) {						//изменить p на элемент из списка myList ??????? UPD заменил p на указатель *iter 
+		if (figure.IsHit(*iter++)) {						//изменить p на элемент из списка myList ??????? UPD заменил p на указатель *iter 
 			return true;
 		}
 	}
