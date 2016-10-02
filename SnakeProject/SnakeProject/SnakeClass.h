@@ -13,7 +13,7 @@ using namespace System;
 
 class SnakeClass : public Figure
 {	
-private:
+protected:
 	Direction direction;
 public:	
 	SnakeClass(Cursor1 tail, int length, Direction _direction);
@@ -22,5 +22,6 @@ public:
 	Cursor1 GetNextPoint();
 	void HandleKey(ConsoleKey);
 	bool Eat(Cursor1 food);
+	bool IsHitTail();
 };
 
