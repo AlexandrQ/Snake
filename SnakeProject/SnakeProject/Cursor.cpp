@@ -46,3 +46,7 @@ void Cursor1::Clear() {
 	symbol = ' ';
 	Draw();
 }
+
+bool Cursor1::IsHit(Cursor1 p) {
+	return p.x == this->x && p.y == this->y;
+}

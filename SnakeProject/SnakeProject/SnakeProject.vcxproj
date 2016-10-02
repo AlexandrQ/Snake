@@ -152,6 +152,7 @@
   <ItemGroup>
     <ClCompile Include="Cursor.cpp" />
     <ClCompile Include="Figure.cpp" />
+    <ClCompile Include="FoodCreator.cpp" />
     <ClCompile Include="HorizontalLine.cpp" />
     <ClCompile Include="SnakeClass.cpp" />
     <ClCompile Include="Source.cpp" />
@@ -161,6 +162,7 @@
     <ClInclude Include="Cursor.h" />
     <ClInclude Include="Direction.h" />
     <ClInclude Include="Figure.h" />
+    <ClInclude Include="FoodCreator.h" />
     <ClInclude Include="HorizontalLine.h" />
     <ClInclude Include="SnakeClass.h" />
     <ClInclude Include="VertikalLine.h" />

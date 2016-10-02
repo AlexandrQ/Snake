@@ -6,6 +6,7 @@
 #include "Direction.h"
 #include "Figure.h"
 
+
 using namespace System;
 
 
@@ -20,5 +21,6 @@ public:
 	void Move();
 	Cursor1 GetNextPoint();
 	void HandleKey(ConsoleKey);
+	bool Eat(Cursor1 food);
 };
 

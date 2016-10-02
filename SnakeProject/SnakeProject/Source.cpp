@@ -4,6 +4,7 @@
 #include "HorizontalLine.h"
 #include "VertikalLine.h"
 #include "SnakeClass.h"
+#include "FoodCreator.h"
 
 
 using namespace std;
@@ -34,17 +35,25 @@ int main() {
 	SnakeClass snake(p, 6, RIGHT);
 	snake.drawLine();
 
-	//Двигаем змейку
-	snake.Move();
-	Sleep(300);
+	FoodCreator foodCteator(100, 40, '$');
+	Cursor1 food = foodCteator.CreateFood();
+	food.Draw();
 	
 	while (true) {		
+		if (snake.Eat(food)) {
+			food = foodCteator.CreateFood();
+			food.Draw();
+		}
+		else {
+			snake.Move();
+		}
+
+		Sleep(100);
+
 		if (Console::KeyAvailable) {
 			ConsoleKeyInfo key = Console::ReadKey();
 			snake.HandleKey(key.Key);
 		}
-		Sleep(100);
-		snake.Move();
 	}
 	
 

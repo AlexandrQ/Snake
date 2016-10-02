@@ -53,3 +53,14 @@ void SnakeClass::HandleKey(ConsoleKey Key) {
 		direction = UP;
 	}
 }
+
+bool SnakeClass::Eat(Cursor1 food) {
+	Cursor1 head = GetNextPoint();
+	if (head.IsHit(food)) {
+		food.symbol = head.symbol;
+		myList.push_back(food);
+		return true;
+	}
+	else
+		return false;
+}

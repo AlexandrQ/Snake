@@ -11,13 +11,15 @@ class Cursor1
 	private:
 		int x;
 		int y;
+		
+	public:		
 		char symbol;
-	public:
 		Cursor1();
 		Cursor1(int a, int b, char c);
 		~Cursor1();
 		void Draw();
 		void Move(int offset, Direction direction);
 		void Clear();
+		bool IsHit(Cursor1 p);
 };
 
