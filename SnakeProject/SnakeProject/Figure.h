@@ -12,5 +12,7 @@ public:
 	Figure();
 	~Figure();
 	void drawLine();
+	bool IsHit(Figure figure);
+	bool IsHit(Cursor1 point);
 };
 

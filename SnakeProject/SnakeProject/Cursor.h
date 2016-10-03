@@ -8,12 +8,13 @@ using namespace std;
 
 class Cursor1
 {
-	private:
+	protected:
 		int x;
 		int y;
 		
 	public:		
-		char symbol;
+		char symbol;			
+
 		Cursor1();
 		Cursor1(int a, int b, char c);
 		~Cursor1();

@@ -16,7 +16,7 @@ FoodCreator::~FoodCreator()
 
 Cursor1 FoodCreator::CreateFood() {
 	srand(time(0));
-	int x = rand() % (mapWidth - 2) + 2;
-	int y = rand() % (mapHeigth - 2) + 2;
+	int x = rand() % (mapWidth);
+	int y = rand() % (mapHeigth);
 	return Cursor1(x, y, sym);
 }

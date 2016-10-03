@@ -40,16 +40,16 @@ Cursor1 SnakeClass::GetNextPoint() {
 }
 
 void SnakeClass::HandleKey(ConsoleKey Key) {
-	if (Key == ConsoleKey::LeftArrow) {
+	if (Key == ConsoleKey::LeftArrow && direction != RIGHT) {
 		direction = LEFT;
 	}
-	if (Key == ConsoleKey::RightArrow) {
+	if (Key == ConsoleKey::RightArrow && direction != LEFT) {
 		direction = RIGHT;
 	}
-	if (Key == ConsoleKey::DownArrow) {
+	if (Key == ConsoleKey::DownArrow && direction != UP) {
 		direction = DOWN;
 	}
-	if (Key == ConsoleKey::UpArrow) {
+	if (Key == ConsoleKey::UpArrow && direction != DOWN) {
 		direction = UP;
 	}
 }
@@ -63,4 +63,16 @@ bool SnakeClass::Eat(Cursor1 food) {
 	}
 	else
 		return false;
+}
+
+bool SnakeClass::IsHitTail() {
+	list<Cursor1>::iterator iter1, iter2;		
+	iter1 = --myList.end();
+	iter2 = myList.begin();	
+	for (; iter2 != --myList.end(); iter2++) {
+		if (iter1->IsHit(*iter2)) {					
+			return true;
+		}
+	}
+	return false;
 }

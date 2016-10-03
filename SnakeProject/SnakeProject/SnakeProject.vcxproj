@@ -157,6 +157,7 @@
     <ClCompile Include="SnakeClass.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="VertikalLine.cpp" />
+    <ClCompile Include="Walls.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cursor.h" />
@@ -166,6 +167,7 @@
     <ClInclude Include="HorizontalLine.h" />
     <ClInclude Include="SnakeClass.h" />
     <ClInclude Include="VertikalLine.h" />
+    <ClInclude Include="Walls.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
