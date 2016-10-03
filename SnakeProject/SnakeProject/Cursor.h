@@ -13,7 +13,7 @@ class Cursor1
 		int y;
 		
 	public:		
-		char symbol;			//придумать как засунуть его под protected
+		char symbol;			
 
 		Cursor1();
 		Cursor1(int a, int b, char c);

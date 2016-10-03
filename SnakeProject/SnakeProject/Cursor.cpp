@@ -2,8 +2,8 @@
 #include "Cursor.h"
 
  Cursor1::Cursor1() {
-	 x = 0;
-	 y = 0;
+	 x = 2;
+	 y = 2;
 	 symbol = '#';
 }
 

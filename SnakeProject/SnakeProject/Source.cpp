@@ -14,10 +14,13 @@ using namespace System;
 
 int main() {
 	
-	system("mode con cols=100 lines=40");
+	const int _mapWidth = 60; 
+	const int _mapHeigth = 30;
+
+	system("mode con cols=60 lines=30");
 
 	//Рисуем рамку
-	Walls walls(100, 40);
+	Walls walls(_mapWidth, _mapHeigth);
 	walls.Draw();
 
 	//Рисуем змейку
@@ -26,13 +29,13 @@ int main() {
 	snake.drawLine();
 
 	//Рисуем еду
-	FoodCreator foodCteator(100, 40, '$');
+	FoodCreator foodCteator(_mapWidth, _mapHeigth, '$');
 	Cursor1 food = foodCteator.CreateFood();
 	food.Draw();
 	
 
 	while (true) {		
-		if (walls.IsHit(snake) || snake.IsHitTail()) {
+		if (walls.IsHit(snake) || snake.IsHitTail() ) {
 			break;
 		}
 		if (snake.Eat(food)) {
